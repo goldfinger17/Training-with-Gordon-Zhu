@@ -31,7 +31,7 @@ var todoList = {
   },
   toggleCompleted: function(position) {
     var todo = this.todos[position];
-    todo.completed = !todo.completed
+    todo.completed = !todo.completed;
     this.displayTodos();
   },
   toggleAll: function() {
@@ -45,14 +45,12 @@ var todoList = {
     if (completedTodos === totalTodos) {
       for (var i = 0; i < totalTodos; i++) {
         this.todos[i].completed = false;
-      } else {
-        for (var i = 0; i < totalTodos; i++) {
-          this.todos[i].completed = true;
-        }
       }
-      this.displayTodos();
+    } else {
+      for (var i = 0; i < totalTodos; i++) {
+        this.todos[i].completed = true;
+      }
     }
+    this.displayTodos();
   }
 };
-
-
